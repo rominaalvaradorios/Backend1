@@ -1,0 +1,21 @@
+<%- include("templates/header", {titulo:"Contactanos"})%>
+
+  
+      
+        <form action="/contactanos" method="POST" id="formulario">
+          
+          <div class="mb-2 text-start">
+            <label for="nombre" class="form-label">Nombre:</label>
+            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Romina" required>
+          </div>
+
+          <div class="mb-3 text-start">
+            <label for="edad" class="form-label">Edad:</label>
+            <input type="text" class="form-control" id="edad" name="edad" placeholder="25" required>
+              </div>
+
+          <button type="submit" class="btn btn-primary">Enviar</button>
+
+        </form>
+      
+<%- include("templates/footer")%>

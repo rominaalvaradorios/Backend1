@@ -1,0 +1,18 @@
+<%- include("templates/header", {titulo:"Editar Contacto"})%>
+
+<form action="/editarContacto" method="POST" id="formulario">
+  <input type="hidden" value="<%= contactoMongo._id %>" name="id">
+  <div class="mb-2 text-start">
+    <label for="nombre" class="form-label">Nombre:</label>
+    <input type="text" class="form-control" id="nombre" name="nombre" value="<%= contactoMongo.nombre %>" placeholder="Romina" required>
+  </div>
+
+  <div class="mb-3 text-start">
+    <label for="edad" class="form-label">Edad:</label>
+    <input type="text" class="form-control" id="edad" name="edad" value="<%= contactoMongo.edad %>" placeholder="25" required>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+</form>
+
+<%- include("templates/footer")%>
