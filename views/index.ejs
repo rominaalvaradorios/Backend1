@@ -1,32 +1,38 @@
-<%- include("templates/header", {titulo:"Pagina de Inicio"})%>
+<%- include("templates/header", {titulo:"Pagina de inicio"})  %>
 <%
-    var a = 5
-    var b = 10
-    var suma = a+b
+    var a=5
+    var b=10
+    var suma=a+b
 %>
-<div class = "alert alert-primary"><%= suma %></div>
-<h1> <%= nombre %> </h1>
-<h2> <%= grupo %> </h2>
-<h2> Desayunos </h2>
+<div class="alert alert-primary"> La suma es<%= suma %></div>
 
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Desayuno</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% desayunos.forEach((desayuno, index) => { %>
-      <tr>
-        <th scope="row"><%= index + 1 %></th>
-        <td><%= desayuno %></td>
-      </tr>
+<h1><%= nombre %></h1>
+<h2><%= grupo %></h2>
+<h2>Desayunos</h2>
+<ul>
+    <% desayunos.forEach(desayuno=>{ %>
+        <li><%= desayuno %></li>
     <% }) %>
-  </tbody>
+</ul>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <td>
+                Desayuno
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+        <% desayunos.forEach(desayuno=>{ %>
+        <tr>
+            <td><%= desayuno %></td>
+        </tr>
+        <% }) %>
+    </tbody>
 </table>
 
-<a href="/abc/ <%= nombre %>">Pasar el nombre</a>
 
-<%- include("templates/footer")%>
-    
+<a href="/abc/ <%= nombre %>">Pasar al nombre</a>
+<%- include("templates/footer") %>
+

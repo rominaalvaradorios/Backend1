@@ -1,26 +1,24 @@
-<%- include("templates/header", { titulo: "Mostrar Contactos" }) %>
+<%- include("templates/header", {titulo:"Mostrar Contactos"})  %>
+  <table >
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Edad</th>
+        <th>Modificar / Borrar</th>
+      </tr>
 
-
-<table>
-  <thead>
-    <tr>
-      <th>Nombre</th>
-      <th>Edad</th>
-      <th>Modificar / Borrar</th>
-    </tr>
-  </thead>
   <tbody>
     <% contactosMongo.forEach(contacto => { %>
       <tr>
-        <td><%= contacto.nombre %></td>
+        <td><%= contacto.nombre %> </td>
         <td><%= contacto.edad %></td>
         <td>
-          <a href="/editarContacto/<%= contacto._id %>">Editar</a>
-          <a href="/borrarContacto/<%= contacto._id %>">Borrar</a>
+          <a href="/editarContacto/<%= contacto._id %>" >Editar</a>
+          <a href="/borrarContacto/<%= contacto._id %>" >Borrar</a>
         </td>
-      </tr>
+      </tr> 
     <% }) %>
   </tbody>
-</table>
+  </table>
 
-<%- include("templates/footer.ejs") %>
+<%- include("templates/footer") %>

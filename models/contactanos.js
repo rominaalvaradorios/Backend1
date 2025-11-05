@@ -1,20 +1,18 @@
-import mongoose from "mongoose"; //clase
+import mongoose from "mongoose"
 
 const contactanosSchema = new mongoose.Schema({
 	nombre:{
-		type:String,
+		type: String,
 		required: true,
-		trim: true,
-		unique: false,
-	}, //coma para otro atributo
+		trim: true, //Borrar los espacios
+		unique: false
+	},
 	edad:{
 		type: Number,
 		required: true,
-		trim: true,
-		unique: false,
-
-	},
-
+		trim: true, 
+		unique: false 
+	}
 })
 
 export default mongoose.model("contactanos", contactanosSchema)

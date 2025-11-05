@@ -1,18 +1,15 @@
-<%- include("templates/header", {titulo:"Editar Contacto"})%>
+<%- include("templates/header", {titulo:"Editar Contacto"})  %>
 
-<form action="/editarContacto" method="POST" id="formulario">
-  <input type="hidden" value="<%= contactoMongo._id %>" name="id">
-  <div class="mb-2 text-start">
-    <label for="nombre" class="form-label">Nombre:</label>
-    <input type="text" class="form-control" id="nombre" name="nombre" value="<%= contactoMongo.nombre %>" placeholder="Romina" required>
-  </div>
+    <form action="/editarContacto" id="formulario" method="POST">
+        <input type="hidden" value="<%= contactoMongo._id  %>" name="id">
 
-  <div class="mb-3 text-start">
-    <label for="edad" class="form-label">Edad:</label>
-    <input type="text" class="form-control" id="edad" name="edad" value="<%= contactoMongo.edad %>" placeholder="25" required>
-  </div>
+        <label>Nombre</label>
+        <input class="form-control mb-3" type="text" name="nombre" id="nombre" placeholder="Romina" value="<%= contactoMongo.nombre %>">
 
-  <button type="submit" class="btn btn-primary">Guardar Cambios</button>
-</form>
+        <label>Edad</label>
+        <input class="form-control mb-3" type="text" name="edad" id="edad" placeholder="20" value="<%= contactoMongo.edad %>">
+        
+        <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+    </form>
 
-<%- include("templates/footer")%>
+<%- include("templates/footer") %>
