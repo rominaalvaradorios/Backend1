@@ -1,7 +1,7 @@
 import express from "express";
 import ejs from "ejs"
 import rutas from "./rutas/rutas.js";
-import {conectarBD} from "./bd/bd.js"
+import {conectarBD} from "./BD/bd.js"
 
 async function conexionBD(){
     await conectarBD()
