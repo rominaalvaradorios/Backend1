@@ -1,5 +1,5 @@
 import {Router} from "express"
-import {contactanosNuevo, mostrarContactos, buscarNombre, buscarId, editarContacto, borrarContacto} from "../bd/contactanosBD.js"
+import {contactanosNuevo, mostrarContactos, buscarNombre, buscarId, editarContacto, borrarContacto} from "../BD/contactanosBD.js"
 const router = Router()
 
 router.get("/", (req,res)=>{
